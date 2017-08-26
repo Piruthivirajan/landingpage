@@ -1,0 +1,49 @@
+<html><title>Login</title><head><link rel="stylesheet" type="text/css" href="register.component.css">
+<script src="jquery-3.2.1.min.js"></script>
+
+<script>
+$(function () {
+  var showClass = 'show';
+  
+  $('input').on('checkval', function () {
+    var label = $(this).prev('label');
+    if(this.value !== '') {
+      label.addClass(showClass);
+    } else {
+      label.removeClass(showClass);
+    }
+  }).on('keyup', function () {
+    $(this).trigger('checkval');
+  }); 
+});
+
+</script>
+</head><body>
+
+
+
+<div class="container">
+  <form>
+    <h1>Sign-Up Now</h1>
+    <div class="field">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstNameTextField" placeholder="First Name">
+    </div>
+    <div class="field">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastNameTextField" placeholder="Last Name">
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="emailTextField" placeholder="Email">
+    </div>
+    <button>Start</button>
+  </form>
+</div>
+
+
+
+
+
+
+</body></html>
